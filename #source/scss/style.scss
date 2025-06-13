@@ -74,3 +74,45 @@ body {
 	}
 }
 
+.about {
+	margin-top: 80px;
+	&__container {
+		max-width: 850px;
+		margin: 0 auto;
+	}
+	&__row {
+		display: flex;
+	}
+	&__img {
+		margin-right: 120px;
+	}
+	&__body {
+		margin-top: 15px;
+
+	}
+	&__title {
+		padding-right: 60px;
+	}
+	&__text {
+		font-family: Arial;
+		font-size: 15px;
+		line-height: 24px;
+		color: #4C4C4C;
+		margin-top: 25px;
+		p {
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.container {
+}
+.title {
+	font-size: 35px;
+	line-height: 45px;
+	letter-spacing: 2px;
+	color: #545454;
+
+}

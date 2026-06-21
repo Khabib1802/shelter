@@ -58,7 +58,7 @@
   }
 
   @media (max-width: abs.$breakpoint-lg) {
-    .hero__content {
+    &__content {
       flex-direction: column;
       row-gap: 6.25rem;
     }
@@ -77,6 +77,28 @@
 
     &__image-block {
       max-width: 35.5rem;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-sm) {
+    &__title {
+      font-size: var(--font-size-lg);
+      letter-spacing: 0.06em;
+      max-width: 200px;
+    }
+
+    &__body {
+      text-align: center;
+      align-items: center;
+    }
+
+    &__text {
+      margin-inline: -0.625rem;
+    }
+
+    &__image-block {
+      margin-inline: -0.625rem;
+      max-width: 16.25rem;
     }
   }
 }

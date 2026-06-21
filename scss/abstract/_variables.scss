@@ -1,35 +1,94 @@
-$font-family-base: Arial, sans-serif;
-$font-family-heading: 'Georgia', Georgia, serif;
-$font-family-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
+:root {
+  /* ========================================================================
+     1. ПРИМИТИВЫ (Палитра). Сюда смотрим только при настройке базовых цветов.
+     ======================================================================== */
+  --clr-white: #ffffff;
 
-$color-white: #ffffff;
-$color-black: #1B1B1B;
-$color-gray-100: #f6f6f6;
-$color-gray-200: #f1f1f1;
-$color-gray-300: #cdcdcd;
-$color-gray-400: #b2b2b2;
-$color-gray-500: #8f8f8f;
-$color-gray-600: #545454;
-$color-gray-700: #292929;
-$color-brown-100: #f1cdb3;
-$color-brown-200: #fddcc4;
-$color-bg-dark-1: #5b483a;
-$color-bg-dark-2: #262425;
+  --clr-gray-100: #f6f6f6;
+  --clr-gray-200: #f1f1f1;
+  --clr-gray-300: #cdcdcd;
+  --clr-gray-400: #b2b2b2;
+  --clr-gray-500: #545454;
+  --clr-gray-600: #4c4c4c; /* Переименовали из black, так как это темно-серый */
+  --clr-gray-700: #292929;
+
+  --clr-brown-100: #f1cdb3;
+  --clr-brown-200: #fddcc4;
+
+  --clr-brand-dark-1: #5b483a;
+  --clr-brand-dark-2: #262425;
+
+  /* ========================================================================
+     2. СЕМАНТИКА (Роли). ЭТИ переменные мы используем в верстке секций и блоков.
+     ======================================================================== */
+
+  /* Фоны (Backgrounds) */
+  --bg-primary: var(--clr-white); /* Основной фон сайта */
+  --bg-secondary: var(
+    --clr-gray-100
+  ); /* Для чередования секций (zebra-striping) */
+  --bg-accent: var(--clr-brown-200); /* Фон для важных блоков / плашек */
+  --bg-dark: var(--clr-brand-dark-2); /* Фон для футера или темного хедера */
+  --bg-dark-card: var(--clr-brand-dark-1); /* Карточки на темном фоне */
+
+  /* Текст (Typography) */
+  --text-main: var(--clr-dark); /* Основной текст и заголовки */
+  --text-title: var(--clr-gray-500); /* Второстепенный текст, подписи, даты */
+  --text-inverse: var(--clr-white); /* Текст на темных фонах (футер, кнопки) */
+
+  /* Интерактив и Кнопки (Interactive / Buttons) */
+  --cta-primary: var(--clr-brown-100); /* Главный цвет кнопок и акцентов */
+  --cta-primary-hover: var(--clr-brown-200); /* Кнопка при наведении */
+  --link-color: var(--clr-brand-dark-1); /* Цвет обычных текстовых ссылок */
+
+  /* Границы и декоративные элементы (Borders & Dividers) */
+  --border-light: var(
+    --clr-gray-200
+  ); /* Тонкие линии, сетка, границы инпутов */
+  --border-focus: var(--clr-brown-100); /* Обводка полей формы при клике */
+
+  /* ========================================================================
+     ТИПОГРАФИКА (Размеры шрифтов)
+     ======================================================================== */
+  --font-size-xs: 0.8125rem; /* ~13px | Мелкий текст, сноски */
+  --font-size-sm: 1rem; /* ~16px | Основной текст (бывшие 15px и 17px) */
+  --font-size-md: 1.25rem; /* ~20px | Лид-текст, важные пункты */
+
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem; /* ~32px | Заголовки секций H2 (бывшие 32px и 35px) */
+  --font-size-xxl: 2.75rem; /* ~44px | Главный заголовок H1 */
+}
+
+// $color-white: #ffffff;
+// $color-black: #1B1B1B;
+// $color-gray-100: #f6f6f6;
+// $color-gray-200: #f1f1f1;
+// $color-gray-300: #cdcdcd;
+// $color-gray-400: #b2b2b2;
+// $color-gray-500: #8f8f8f;
+// $color-gray-600: #545454;
+// $color-gray-700: #292929;
+// $color-brown-100: #f1cdb3;
+// $color-brown-200: #fddcc4;
+// $color-bg-dark-1: #5b483a;
+// $color-bg-dark-2: #262425;
+
+$container-max-width: 1280px;
+$container-padding: 2.5rem;
+
+$font-family-base: Arial, sans-serif;
+$font-family-heading: "Georgia", Georgia, serif;
+$font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
 
 $radius-round: 100px;
 $radius-card: 10px;
 $radius-small: 9px;
 $radius-regular: 16px;
 
-$shadow-card: 0 18px 40px rgba($color-black, 0.08);
-
 $breakpoint-sm: 320px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
-
-$container-max: 1280px;
-$gutter: 2rem;
 
 $font-size-base: 1rem;
 $line-height-base: 1.5;

@@ -1,3 +1,55 @@
+@charset "UTF-8";
+:root {
+  /* ========================================================================
+     1. ПРИМИТИВЫ (Палитра). Сюда смотрим только при настройке базовых цветов.
+     ======================================================================== */
+  --clr-white: #ffffff;
+  --clr-gray-100: #f6f6f6;
+  --clr-gray-200: #f1f1f1;
+  --clr-gray-300: #cdcdcd;
+  --clr-gray-400: #b2b2b2;
+  --clr-gray-500: #545454;
+  --clr-gray-600: #4c4c4c; /* Переименовали из black, так как это темно-серый */
+  --clr-gray-700: #292929;
+  --clr-brown-100: #f1cdb3;
+  --clr-brown-200: #fddcc4;
+  --clr-brand-dark-1: #5b483a;
+  --clr-brand-dark-2: #262425;
+  /* ========================================================================
+     2. СЕМАНТИКА (Роли). ЭТИ переменные мы используем в верстке секций и блоков.
+     ======================================================================== */
+  /* Фоны (Backgrounds) */
+  --bg-primary: var(--clr-white); /* Основной фон сайта */
+  --bg-secondary: var(
+    --clr-gray-100
+  ); /* Для чередования секций (zebra-striping) */
+  --bg-accent: var(--clr-brown-200); /* Фон для важных блоков / плашек */
+  --bg-dark: var(--clr-brand-dark-2); /* Фон для футера или темного хедера */
+  --bg-dark-card: var(--clr-brand-dark-1); /* Карточки на темном фоне */
+  /* Текст (Typography) */
+  --text-main: var(--clr-dark); /* Основной текст и заголовки */
+  --text-title: var(--clr-gray-500); /* Второстепенный текст, подписи, даты */
+  --text-inverse: var(--clr-white); /* Текст на темных фонах (футер, кнопки) */
+  /* Интерактив и Кнопки (Interactive / Buttons) */
+  --cta-primary: var(--clr-brown-100); /* Главный цвет кнопок и акцентов */
+  --cta-primary-hover: var(--clr-brown-200); /* Кнопка при наведении */
+  --link-color: var(--clr-brand-dark-1); /* Цвет обычных текстовых ссылок */
+  /* Границы и декоративные элементы (Borders & Dividers) */
+  --border-light: var(
+    --clr-gray-200
+  ); /* Тонкие линии, сетка, границы инпутов */
+  --border-focus: var(--clr-brown-100); /* Обводка полей формы при клике */
+  /* ========================================================================
+     ТИПОГРАФИКА (Размеры шрифтов)
+     ======================================================================== */
+  --font-size-xs: 0.8125rem; /* ~13px | Мелкий текст, сноски */
+  --font-size-sm: 1rem; /* ~16px | Основной текст (бывшие 15px и 17px) */
+  --font-size-md: 1.25rem; /* ~20px | Лид-текст, важные пункты */
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem; /* ~32px | Заголовки секций H2 (бывшие 32px и 35px) */
+  --font-size-xxl: 2.75rem; /* ~44px | Главный заголовок H1 */
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -14,6 +66,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.link {
+  transition: all 0.3s;
 }
 
 * {
@@ -112,25 +168,27 @@ body {
 }
 
 .link {
-  display: inline-block;
-  border-radius: 100px;
-  padding: 15px 45px;
-  background: #F1CDB3;
-  font-size: 17px;
-  letter-spacing: 1px;
-  line-height: 22px;
-  color: #292929;
-  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100vmax;
+  padding: 0.9375rem 2.8125rem;
+  background-color: var(--cta-primary);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  color: var(--clr-gray-700);
 }
 
 .link:hover {
-  background-color: #FDDCC4;
+  background-color: var(--cta-primary-hover);
 }
 
 .title {
-  font-size: 35px;
-  line-height: 45px;
-  letter-spacing: 2.1px;
+  font-size: var(--font-size-xl);
+  line-height: 1.4;
+  letter-spacing: 0.125em;
   color: #545454;
 }
 
@@ -145,7 +203,7 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   transition: all 0.3s;
 }
 
@@ -154,8 +212,8 @@ body {
 }
 
 .slider__btn:hover {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .slider__row {
@@ -165,7 +223,7 @@ body {
 .slider__card {
   display: block;
   overflow: hidden;
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 10px;
   padding-bottom: 30px;
   flex: 1 1 33.333%;
@@ -180,8 +238,8 @@ body {
 }
 
 .slider__card:hover .slider__link {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .slider__img img {
@@ -204,7 +262,7 @@ body {
   display: inline-block;
   border-radius: 100px;
   padding: 13px 43px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   font-size: 17px;
   letter-spacing: 1px;
   line-height: 22px;
@@ -221,7 +279,7 @@ body {
 .slider__element-card {
   display: block;
   overflow: hidden;
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 10px;
   padding-bottom: 30px;
   display: flex;
@@ -230,8 +288,8 @@ body {
 }
 
 .slider__element-card:hover .slider__link {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .slider__name {
@@ -247,29 +305,30 @@ body {
 }
 
 .active-btn {
-  background-color: #F1CDB3;
+  background-color: #f1cdb3;
 }
 
 .disabled-btn {
-  border-color: #CDCDCD;
-  color: #CDCDCD;
+  border-color: #cdcdcd;
+  color: #cdcdcd;
   pointer-events: none;
 }
 
 .wrapper {
-  height: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
 
 .content {
-  flex: 1 1 auto;
+  flex: 1;
 }
 
 .container {
-  width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 2.5rem;
 }
 
 .header {

@@ -26,6 +26,10 @@
   line-height: 1.285;
   letter-spacing: 0.065em;
   color: #545454;
+
+  @media (max-width: abs.$breakpoint-sm) {
+    font-size: var(--font-size-lg);
+  }
 }
 
 .slider {

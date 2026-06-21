@@ -16,3 +16,13 @@
   margin-inline: auto;
   @include abs.responsive-container-padding();
 }
+
+.section {
+  padding-block: 5rem 6.25rem;
+}
+
+@media (max-width: abs.$breakpoint-sm) {
+  .section {
+    padding-block: 2.625rem;
+  }
+}

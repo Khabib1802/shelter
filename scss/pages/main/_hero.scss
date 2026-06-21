@@ -1,0 +1,33 @@
+.hero {
+  background: url("../img/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  height: 920px;
+}
+
+.hero__content {
+  background: url("../img/main/1.png") right bottom no-repeat;
+  height: 920px;
+}
+
+.hero__body {
+  width: 460px;
+  padding: 345px 0 0 0;
+}
+
+.hero__title {
+  width: 350px;
+  font-size: 44px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+
+.hero__text {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #CDCDCD;
+  margin-top: 42px;
+}
+
+.hero__link {
+  margin-top: 42px;
+}

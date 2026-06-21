@@ -1,0 +1,146 @@
+.link {
+  display: inline-block;
+  border-radius: 100px;
+  padding: 15px 45px;
+  background: #F1CDB3;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #292929;
+  transition: background-color 0.3s;
+}
+
+.link:hover {
+  background-color: #FDDCC4;
+}
+
+.title {
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 2.1px;
+  color: #545454;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__btn {
+  background: inherit;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #F1CDB3;
+  transition: all 0.3s;
+}
+
+.slider__btn img {
+  padding-top: 5px;
+}
+
+.slider__btn:hover {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+.slider__row {
+  display: flex;
+}
+
+.slider__card {
+  display: block;
+  overflow: hidden;
+  background: #FAFAFA;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  flex: 1 1 33.333%;
+  margin-right: 90px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slider__card:last-child {
+  margin-right: 0;
+}
+
+.slider__card:hover .slider__link {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+.slider__img img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.slider__name {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #545454;
+}
+
+.slider__link {
+  align-self: center;
+  display: inline-block;
+  border-radius: 100px;
+  padding: 13px 43px;
+  border: 2px solid #F1CDB3;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #292929;
+  transition: all 0.3s;
+}
+
+.slider__element {
+  padding: 0 20px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+.slider__element-card {
+  display: block;
+  overflow: hidden;
+  background: #FAFAFA;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slider__element-card:hover .slider__link {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+.slider__name {
+  flex: 1 1 auto;
+}
+
+
+
+.slider__btn {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.active-btn {
+  background-color: #F1CDB3;
+}
+
+.disabled-btn {
+  border-color: #CDCDCD;
+  color: #CDCDCD;
+  pointer-events: none;
+}

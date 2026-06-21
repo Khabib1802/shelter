@@ -1,0 +1,44 @@
+$font-family-base: Arial, sans-serif;
+$font-family-heading: 'Georgia', Georgia, serif;
+$font-family-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
+
+$color-white: #ffffff;
+$color-black: #1B1B1B;
+$color-gray-100: #f6f6f6;
+$color-gray-200: #f1f1f1;
+$color-gray-300: #cdcdcd;
+$color-gray-400: #b2b2b2;
+$color-gray-500: #8f8f8f;
+$color-gray-600: #545454;
+$color-gray-700: #292929;
+$color-brown-100: #f1cdb3;
+$color-brown-200: #fddcc4;
+$color-bg-dark-1: #5b483a;
+$color-bg-dark-2: #262425;
+
+$radius-round: 100px;
+$radius-card: 10px;
+$radius-small: 9px;
+$radius-regular: 16px;
+
+$shadow-card: 0 18px 40px rgba($color-black, 0.08);
+
+$breakpoint-sm: 320px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+$container-max: 1280px;
+$gutter: 2rem;
+
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2.5rem;
+$space-xl: 4rem;
+$space-xxl: 6rem;
+
+$transition-default: 200ms ease;

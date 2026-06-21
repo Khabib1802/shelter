@@ -1,0 +1,26 @@
+.friends-full {
+  background: #F6F6F6;
+  margin-top: 120px;
+  padding: 80px 0 98px;
+}
+
+.friends-full__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.friends-full__slider {
+  margin-bottom: 30px;
+}
+
+.row-full {
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.friends-full__nav {
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  margin: 0 auto;
+}

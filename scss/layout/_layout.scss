@@ -1,0 +1,18 @@
+@use "../abstract/" as abs;
+
+.wrapper {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: abs.$container-max-width;
+  margin-inline: auto;
+  @include abs.responsive-container-padding();
+}

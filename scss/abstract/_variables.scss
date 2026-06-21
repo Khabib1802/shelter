@@ -1,0 +1,77 @@
+:root {
+  --clr-white: #ffffff;
+
+  --clr-gray-100: #f6f6f6;
+  --clr-gray-200: #f1f1f1;
+  --clr-gray-300: #cdcdcd;
+  --clr-gray-400: #b2b2b2;
+  --clr-gray-500: #545454;
+  --clr-gray-600: #4c4c4c;
+  --clr-gray-700: #292929;
+
+  --clr-brown-100: #f1cdb3;
+  --clr-brown-200: #fddcc4;
+
+  --clr-brand-dark-1: #5b483a;
+  --clr-brand-dark-2: #262425;
+
+  --bg-primary: var(--clr-white);
+  --bg-secondary: var(--clr-gray-100);
+  --bg-accent: var(--clr-brown-200);
+  --bg-dark: var(--clr-brand-dark-2);
+  --bg-dark-card: var(--clr-brand-dark-1);
+
+  --text-main: var(--clr-dark);
+  --text-title: var(--clr-gray-500);
+  --text-accent: var(--clr-white);
+  --text-muted: var(--clr-gray-300);
+  --text-dark: var(--clr-gray-700);
+
+  --cta-primary: var(--clr-brown-100);
+  --cta-primary-hover: var(--clr-brown-200);
+  --link-color: var(--clr-brand-dark-1);
+
+  --border-light: var(--clr-gray-200);
+  --border-focus: var(--clr-brown-100);
+
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-md: 1.25rem;
+
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2.1875rem;
+  --font-size-xxl: 2.75rem;
+
+  --font-size-logo: 2rem;
+}
+
+$container-max-width: 1280px;
+$container-padding-mobile: 1.25rem;
+$container-padding-tablet: 1.875rem;
+$container-padding-desktop: 2.5rem;
+
+$font-family-base: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-heading: "Georgia", Georgia, serif;
+$font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+
+$radius-round: 100px;
+$radius-card: 10px;
+$radius-small: 9px;
+$radius-regular: 16px;
+
+$breakpoint-sm: 320px;
+$breakpoint-md: 750px;
+$breakpoint-lg: 850px;
+$breakpoint-xl: 1024px;
+
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2.5rem;
+$space-xl: 4rem;
+$space-xxl: 6rem;
+
+$transition-default: 200ms ease;

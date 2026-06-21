@@ -1,3 +1,5 @@
+@use "abstract" as abs;
+
 * {
   padding: 0;
   margin: 0;
@@ -27,7 +29,6 @@ header,
 aside {
   display: block;
 }
-
 
 input,
 button,
@@ -75,7 +76,6 @@ h6 {
   font-weight: 400;
 }
 
-
 html,
 body {
   height: 100%;
@@ -92,6 +92,5 @@ html {
 }
 
 body {
-  font-family: Georgia;
+  font-family: abs.$font-family-base;
 }
-

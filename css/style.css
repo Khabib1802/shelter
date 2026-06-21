@@ -1,53 +1,38 @@
-@charset "UTF-8";
 :root {
-  /* ========================================================================
-     1. ПРИМИТИВЫ (Палитра). Сюда смотрим только при настройке базовых цветов.
-     ======================================================================== */
   --clr-white: #ffffff;
   --clr-gray-100: #f6f6f6;
   --clr-gray-200: #f1f1f1;
   --clr-gray-300: #cdcdcd;
   --clr-gray-400: #b2b2b2;
   --clr-gray-500: #545454;
-  --clr-gray-600: #4c4c4c; /* Переименовали из black, так как это темно-серый */
+  --clr-gray-600: #4c4c4c;
   --clr-gray-700: #292929;
   --clr-brown-100: #f1cdb3;
   --clr-brown-200: #fddcc4;
   --clr-brand-dark-1: #5b483a;
   --clr-brand-dark-2: #262425;
-  /* ========================================================================
-     2. СЕМАНТИКА (Роли). ЭТИ переменные мы используем в верстке секций и блоков.
-     ======================================================================== */
-  /* Фоны (Backgrounds) */
-  --bg-primary: var(--clr-white); /* Основной фон сайта */
-  --bg-secondary: var(
-    --clr-gray-100
-  ); /* Для чередования секций (zebra-striping) */
-  --bg-accent: var(--clr-brown-200); /* Фон для важных блоков / плашек */
-  --bg-dark: var(--clr-brand-dark-2); /* Фон для футера или темного хедера */
-  --bg-dark-card: var(--clr-brand-dark-1); /* Карточки на темном фоне */
-  /* Текст (Typography) */
-  --text-main: var(--clr-dark); /* Основной текст и заголовки */
-  --text-title: var(--clr-gray-500); /* Второстепенный текст, подписи, даты */
-  --text-inverse: var(--clr-white); /* Текст на темных фонах (футер, кнопки) */
-  /* Интерактив и Кнопки (Interactive / Buttons) */
-  --cta-primary: var(--clr-brown-100); /* Главный цвет кнопок и акцентов */
-  --cta-primary-hover: var(--clr-brown-200); /* Кнопка при наведении */
-  --link-color: var(--clr-brand-dark-1); /* Цвет обычных текстовых ссылок */
-  /* Границы и декоративные элементы (Borders & Dividers) */
-  --border-light: var(
-    --clr-gray-200
-  ); /* Тонкие линии, сетка, границы инпутов */
-  --border-focus: var(--clr-brown-100); /* Обводка полей формы при клике */
-  /* ========================================================================
-     ТИПОГРАФИКА (Размеры шрифтов)
-     ======================================================================== */
-  --font-size-xs: 0.8125rem; /* ~13px | Мелкий текст, сноски */
-  --font-size-sm: 1rem; /* ~16px | Основной текст (бывшие 15px и 17px) */
-  --font-size-md: 1.25rem; /* ~20px | Лид-текст, важные пункты */
+  --bg-primary: var(--clr-white);
+  --bg-secondary: var(--clr-gray-100);
+  --bg-accent: var(--clr-brown-200);
+  --bg-dark: var(--clr-brand-dark-2);
+  --bg-dark-card: var(--clr-brand-dark-1);
+  --text-main: var(--clr-dark);
+  --text-title: var(--clr-gray-500);
+  --text-accent: var(--clr-white);
+  --text-muted: var(--clr-gray-300);
+  --text-dark: var(--clr-gray-700);
+  --cta-primary: var(--clr-brown-100);
+  --cta-primary-hover: var(--clr-brown-200);
+  --link-color: var(--clr-brand-dark-1);
+  --border-light: var(--clr-gray-200);
+  --border-focus: var(--clr-brown-100);
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-md: 1.25rem;
   --font-size-lg: 1.5rem;
-  --font-size-xl: 2rem; /* ~32px | Заголовки секций H2 (бывшие 32px и 35px) */
-  --font-size-xxl: 2.75rem; /* ~44px | Главный заголовок H1 */
+  --font-size-xl: 2.1875rem;
+  --font-size-xxl: 2.75rem;
+  --font-size-logo: 2rem;
 }
 
 .visually-hidden {
@@ -68,7 +53,7 @@
   justify-content: center;
 }
 
-.link {
+.header__nav-link, .header__nav-link::after, .link {
   transition: all 0.3s;
 }
 
@@ -164,7 +149,7 @@ html {
 }
 
 body {
-  font-family: Georgia;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .link {
@@ -175,10 +160,11 @@ body {
   border-radius: 100vmax;
   padding: 0.9375rem 2.8125rem;
   background-color: var(--cta-primary);
-  font-size: var(--font-size-sm);
+  font-family: "Georgia", Georgia, serif;
+  font-size: 17px;
   letter-spacing: 0.06em;
   line-height: 1.3;
-  color: var(--clr-gray-700);
+  color: var(--text-dark);
 }
 
 .link:hover {
@@ -186,9 +172,10 @@ body {
 }
 
 .title {
+  font-family: "Georgia", Georgia, serif;
   font-size: var(--font-size-xl);
-  line-height: 1.4;
-  letter-spacing: 0.125em;
+  line-height: 1.285;
+  letter-spacing: 0.065em;
   color: #545454;
 }
 
@@ -328,117 +315,163 @@ body {
   width: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: 2.5rem;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 750px) {
+  .container {
+    padding-inline: 1.875rem;
+  }
+}
+@media (min-width: 850px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
 }
 
 .header {
   position: absolute;
+  inset-inline: 0;
   width: 100%;
-  padding-top: 30px;
-  z-index: 1;
+  padding-block-start: 2rem;
+  z-index: 10;
 }
-
 .header__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
 .header__logo-link {
   display: flex;
   flex-direction: column;
 }
-
 .header__logo-title {
-  font-size: 32px;
-  letter-spacing: 2px;
-  color: #F1CDB3;
-  padding: 2px 0 13px;
+  padding-block-end: 0.8125rem;
+  font-family: "Georgia", Georgia, serif;
+  font-size: var(--font-size-logo);
+  letter-spacing: 0.06em;
+  color: var(--cta-primary);
 }
-
 .header__logo-subtitle {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   text-align: center;
-  letter-spacing: 1.4px;
-  color: #fff;
+  letter-spacing: 0.1em;
+  color: var(--text-accent);
 }
-
-.header__nav {
-  padding-bottom: 2px;
-}
-
 .header__nav-list {
-  height: 100%;
   display: flex;
   align-items: center;
+  gap: 2.25rem;
 }
-
-.header__nav-list li {
-  line-height: 10px;
-  margin-right: 36px;
-}
-
-.header__nav-list li:last-child {
-  margin-right: 0;
-}
-
 .header__nav-link {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
-  color: #CDCDCD;
-  padding: 10px 0;
-  transition: color 0.3s;
   position: relative;
+  padding-block: 0.625rem;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
 }
-
-.header__nav-link:hover {
-  color: #FAFAFA;
+.header__nav-link:hover, .header__nav-link:focus-visible {
+  color: var(--text-accent);
 }
-
-.header__nav-link:active {
-  color: #FAFAFA;
-}
-
-.header__nav-link:active::after {
+.header__nav-link::after {
   content: "";
-  display: block;
   position: absolute;
-  height: 3px;
+  inset-block-end: 0.25rem;
+  inset-inline-start: 0;
   width: 100%;
-  background-color: #F1CDB3;
-  bottom: 4px;
+  height: 0.1875rem;
+  background-color: var(--cta-primary);
+  scale: 0 1;
+  transform-origin: center;
 }
-
-.active {
-  color: #FAFAFA;
+.header__nav-link:active::after {
+  scale: 1 1;
+}
+.header__nav-link.active {
+  color: var(--text-accent);
   pointer-events: none;
 }
-
-.active::after {
+.header__nav-link.active::after {
+  scale: 1 1;
+}
+.header--light .header__nav-link {
+  color: #545454;
+}
+.header--light .header__nav-link:hover, .header--light .header__nav-link:focus-visible, .header--light .header__nav-link.active {
+  color: var(--text-dark);
+}
+.header--light .header__logo-title {
+  color: var(--text-title);
+}
+.header--light .header__logo-subtitle {
+  color: var(--text-dark);
+}
+.header__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 10px;
+  gap: 6px;
+  width: 40px;
+  z-index: 100;
+}
+.header__burger span, .header__burger::before, .header__burger::after {
   content: "";
   display: block;
-  position: absolute;
-  height: 3px;
   width: 100%;
-  background-color: #F1CDB3;
-  bottom: 4px;
+  height: 2px;
+  background-color: var(--bg-accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-.header-dark {
-  color: #545454;
-  transition: color 0.3s;
+.is-open .header__burger::before {
+  transform: translateY(8px) rotate(45deg);
 }
-
-.header__nav-list .header-dark:hover {
-  color: #292929;
+.is-open .header__burger span {
+  opacity: 0;
 }
-
-.header-dark.active {
-  color: #292929;
+.is-open .header__burger::after {
+  transform: translateY(-8px) rotate(-45deg);
 }
-
-.header-dark-darker {
-  color: #292929;
+@media (max-width: 750px) {
+  .header__burger {
+    display: flex;
+  }
+  .header__nav {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(41, 41, 41, 0.98);
+    padding: 100px 40px 40px;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+  .is-open .header__nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .header__nav-list li {
+    width: 100%;
+  }
+  .header__nav-link {
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 /*Footer*/
@@ -650,37 +683,71 @@ body {
 }
 
 .hero {
-  background: url("../img/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
-  height: 920px;
+  background: url("../img/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+  display: flex;
+  align-items: flex-end;
 }
-
 .hero__content {
-  background: url("../img/main/1.png") right bottom no-repeat;
-  height: 920px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2.625rem;
+  margin-block-start: 11.25rem;
 }
-
 .hero__body {
-  width: 460px;
-  padding: 345px 0 0 0;
+  max-width: 28.75rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.625rem;
+  align-self: start;
+  margin-block-start: clamp(0px, 0px + 160 * (100vw - 768px) / 512, 160px);
 }
-
 .hero__title {
-  width: 350px;
-  font-size: 44px;
-  line-height: 56px;
-  color: #FFFFFF;
+  font-family: "Georgia", Georgia, serif;
+  font-size: var(--font-size-xxl);
+  line-height: 1.3;
+  color: #ffffff;
+  max-width: 21.875rem;
 }
-
 .hero__text {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 24px;
-  color: #CDCDCD;
-  margin-top: 42px;
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: #cdcdcd;
 }
-
-.hero__link {
-  margin-top: 42px;
+.hero__image-block {
+  max-width: 43.625rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-self: end;
+}
+.hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+@media (max-width: 850px) {
+  .hero .hero__content {
+    flex-direction: column;
+    row-gap: 6.25rem;
+  }
+  .hero__body {
+    align-self: center;
+  }
+  .hero__link {
+    align-self: center;
+  }
+  .hero__content {
+    margin-block-start: 9.375rem;
+  }
+  .hero__image-block {
+    max-width: 35.5rem;
+  }
 }
 
 .friends-full {

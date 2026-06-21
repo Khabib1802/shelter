@@ -1,4 +1,4 @@
-@use 'variables' as vars;
+@use "variables" as var;
 
 @mixin visually-hidden {
   position: absolute !important;
@@ -14,23 +14,44 @@
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
-    @media (min-width: vars.$breakpoint-sm) { @content; }
-  }
-  @else if $breakpoint == md {
-    @media (min-width: vars.$breakpoint-md) { @content; }
-  }
-  @else if $breakpoint == lg {
-    @media (min-width: vars.$breakpoint-lg) { @content; }
-  }
-  @else if $breakpoint == xl {
-    @media (min-width: vars.$breakpoint-xl) { @content; }
+    @media (min-width: vars.$breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: vars.$breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: vars.$breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: vars.$breakpoint-xl) {
+      @content;
+    }
   }
 }
 
 @mixin fluid-type($min, $max) {
-  font-size: clamp($min, calc(#{$min} + (#{$max} - #{$min}) * ((100vw - 320px) / (1280 - 320))), $max);
+  font-size: clamp(
+    $min,
+    calc(#{$min} + (#{$max} - #{$min}) * ((100vw - 320px) / (1280 - 320))),
+    $max
+  );
 }
 
 @mixin section-spacing($top: vars.$space-xxl, $bottom: vars.$space-xxl) {
   padding: $top 0 $bottom;
+}
+
+@mixin responsive-container-padding() {
+  padding-inline: var.$container-padding-mobile;
+
+  @media (min-width: var.$breakpoint-md) {
+    padding-inline: var.$container-padding-tablet;
+  }
+
+  @media (min-width: var.$breakpoint-lg) {
+    padding-inline: var.$container-padding-desktop;
+  }
 }

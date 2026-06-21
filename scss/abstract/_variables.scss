@@ -1,7 +1,4 @@
 :root {
-  /* ========================================================================
-     1. ПРИМИТИВЫ (Палитра). Сюда смотрим только при настройке базовых цветов.
-     ======================================================================== */
   --clr-white: #ffffff;
 
   --clr-gray-100: #f6f6f6;
@@ -9,7 +6,7 @@
   --clr-gray-300: #cdcdcd;
   --clr-gray-400: #b2b2b2;
   --clr-gray-500: #545454;
-  --clr-gray-600: #4c4c4c; /* Переименовали из black, так как это темно-серый */
+  --clr-gray-600: #4c4c4c;
   --clr-gray-700: #292929;
 
   --clr-brown-100: #f1cdb3;
@@ -18,65 +15,42 @@
   --clr-brand-dark-1: #5b483a;
   --clr-brand-dark-2: #262425;
 
-  /* ========================================================================
-     2. СЕМАНТИКА (Роли). ЭТИ переменные мы используем в верстке секций и блоков.
-     ======================================================================== */
+  --bg-primary: var(--clr-white);
+  --bg-secondary: var(--clr-gray-100);
+  --bg-accent: var(--clr-brown-200);
+  --bg-dark: var(--clr-brand-dark-2);
+  --bg-dark-card: var(--clr-brand-dark-1);
 
-  /* Фоны (Backgrounds) */
-  --bg-primary: var(--clr-white); /* Основной фон сайта */
-  --bg-secondary: var(
-    --clr-gray-100
-  ); /* Для чередования секций (zebra-striping) */
-  --bg-accent: var(--clr-brown-200); /* Фон для важных блоков / плашек */
-  --bg-dark: var(--clr-brand-dark-2); /* Фон для футера или темного хедера */
-  --bg-dark-card: var(--clr-brand-dark-1); /* Карточки на темном фоне */
+  --text-main: var(--clr-dark);
+  --text-title: var(--clr-gray-500);
+  --text-accent: var(--clr-white);
+  --text-muted: var(--clr-gray-300);
+  --text-dark: var(--clr-gray-700);
 
-  /* Текст (Typography) */
-  --text-main: var(--clr-dark); /* Основной текст и заголовки */
-  --text-title: var(--clr-gray-500); /* Второстепенный текст, подписи, даты */
-  --text-inverse: var(--clr-white); /* Текст на темных фонах (футер, кнопки) */
+  --cta-primary: var(--clr-brown-100);
+  --cta-primary-hover: var(--clr-brown-200);
+  --link-color: var(--clr-brand-dark-1);
 
-  /* Интерактив и Кнопки (Interactive / Buttons) */
-  --cta-primary: var(--clr-brown-100); /* Главный цвет кнопок и акцентов */
-  --cta-primary-hover: var(--clr-brown-200); /* Кнопка при наведении */
-  --link-color: var(--clr-brand-dark-1); /* Цвет обычных текстовых ссылок */
+  --border-light: var(--clr-gray-200);
+  --border-focus: var(--clr-brown-100);
 
-  /* Границы и декоративные элементы (Borders & Dividers) */
-  --border-light: var(
-    --clr-gray-200
-  ); /* Тонкие линии, сетка, границы инпутов */
-  --border-focus: var(--clr-brown-100); /* Обводка полей формы при клике */
-
-  /* ========================================================================
-     ТИПОГРАФИКА (Размеры шрифтов)
-     ======================================================================== */
-  --font-size-xs: 0.8125rem; /* ~13px | Мелкий текст, сноски */
-  --font-size-sm: 1rem; /* ~16px | Основной текст (бывшие 15px и 17px) */
-  --font-size-md: 1.25rem; /* ~20px | Лид-текст, важные пункты */
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-md: 1.25rem;
 
   --font-size-lg: 1.5rem;
-  --font-size-xl: 2rem; /* ~32px | Заголовки секций H2 (бывшие 32px и 35px) */
-  --font-size-xxl: 2.75rem; /* ~44px | Главный заголовок H1 */
+  --font-size-xl: 2.1875rem;
+  --font-size-xxl: 2.75rem;
+
+  --font-size-logo: 2rem;
 }
 
-// $color-white: #ffffff;
-// $color-black: #1B1B1B;
-// $color-gray-100: #f6f6f6;
-// $color-gray-200: #f1f1f1;
-// $color-gray-300: #cdcdcd;
-// $color-gray-400: #b2b2b2;
-// $color-gray-500: #8f8f8f;
-// $color-gray-600: #545454;
-// $color-gray-700: #292929;
-// $color-brown-100: #f1cdb3;
-// $color-brown-200: #fddcc4;
-// $color-bg-dark-1: #5b483a;
-// $color-bg-dark-2: #262425;
-
 $container-max-width: 1280px;
-$container-padding: 2.5rem;
+$container-padding-mobile: 1.25rem;
+$container-padding-tablet: 1.875rem;
+$container-padding-desktop: 2.5rem;
 
-$font-family-base: Arial, sans-serif;
+$font-family-base: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $font-family-heading: "Georgia", Georgia, serif;
 $font-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
 
@@ -86,9 +60,9 @@ $radius-small: 9px;
 $radius-regular: 16px;
 
 $breakpoint-sm: 320px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+$breakpoint-md: 750px;
+$breakpoint-lg: 850px;
+$breakpoint-xl: 1024px;
 
 $font-size-base: 1rem;
 $line-height-base: 1.5;

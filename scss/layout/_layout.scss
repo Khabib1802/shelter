@@ -14,5 +14,5 @@
   width: 100%;
   max-width: abs.$container-max-width;
   margin-inline: auto;
-  padding-inline: abs.$container-padding;
+  @include abs.responsive-container-padding();
 }

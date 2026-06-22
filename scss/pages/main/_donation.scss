@@ -1,49 +1,112 @@
+@use "../../abstract/" as abs;
+
 .donation {
-  padding: 80px 0 100px;
-  background: #F6F6F6;
-}
+  background-color: var(--bg-secondary);
 
-.donation__row {
-  display: flex;
-  width: 915px;
-  margin: 0 auto;
-}
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 57.1875rem;
+    margin-inline: auto;
+    gap: 1.875rem;
+  }
 
-.donation__img {
-  padding: 11px 30px 0 0;
-}
+  &__img {
+    flex: 0 1 31.5625rem;
 
-.donation__body {}
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 
-.donation__title {
-  margin-bottom: 20px;
-}
+  &__body {
+    flex: 1 1 23.75rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
 
-.donation__bank-type {
-  font-size: 15px;
-  line-height: 16.5px;
-  letter-spacing: 0.9px;
-  color: #545454;
-  margin-bottom: 20px;
-}
+  &__bank-type {
+    font-family: abs.$font-family-heading;
+    font-size: var(--font-size-sm);
+    line-height: 1.1;
+    letter-spacing: 0.056rem;
+    color: var(--text-title);
+  }
 
-.donation__card {
-  background: url("../img/icons/1.svg") 15px center no-repeat, #F1CDB3;
-  display: flex;
-  align-items: center;
-  border-radius: 9px;
-  padding: 10px 15px 10px 60px;
-  margin: 0 31px 20px 0;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 1.15px;
-  color: #545454;
-}
+  &__card {
+    background:
+      url("../img/icons/1.svg") left 0.9375rem center no-repeat,
+      var(--cta-primary);
+    border-radius: 0.5625rem;
+    padding-block: 0.625rem;
+    padding-inline: 3.75rem 0.9375rem;
+    font-family: abs.$font-family-heading;
+    font-size: var(--font-size-md);
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    color: var(--text-title);
+    justify-content: start;
+    align-self: start;
+  }
 
-.donation__legal-info {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-style: italic;
-  font-size: 12px;
-  line-height: 18px;
-  color: #B2B2B2;
+  &__legal-info {
+    font-style: italic;
+    font-size: var(--font-size-disclaimer);
+    line-height: 1.5;
+    color: var(--text-disclaimer);
+  }
+
+  @media (max-width: 920px) {
+    &__row {
+      flex-direction: column-reverse;
+      gap: 3.75rem;
+    }
+
+    &__body {
+      flex: 0 1 auto;
+      padding-inline: clamp(0rem, calc(-19.123rem + 61.194vw), 10.25rem);
+    }
+
+    &__img {
+      flex: 0 1 auto;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-lg) {
+  }
+
+  @media (max-width: abs.$breakpoint-sm) {
+    &__body {
+      align-items: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__row {
+      gap: 2.5rem;
+    }
+
+    &__card {
+      max-width: 281px;
+      padding-block: 0.8125rem;
+      font-size: var(--font-size-sm);
+      align-self: auto;
+    }
+
+    &__bank-type {
+      letter-spacing: 0;
+    }
+
+    &__legal-info {
+      text-align: justify;
+    }
+  }
 }

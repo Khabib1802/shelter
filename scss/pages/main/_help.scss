@@ -67,8 +67,8 @@
     &__content {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 3.75rem;
-      padding-inline: 2.5rem;
+      column-gap: clamp(1.875rem, calc(-0.804rem + 8.571vw), 3.75rem);
+      padding-inline: clamp(0rem, calc(-3.571rem + 11.429vw), 2.5rem);
     }
 
     &__row {
@@ -79,8 +79,6 @@
 
 @media (max-width: abs.$breakpoint-sm) {
   .help {
-    // padding-block: 3.75rem 2.5rem;
-
     &__content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

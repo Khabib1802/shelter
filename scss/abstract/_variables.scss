@@ -28,6 +28,7 @@
   --text-accent: var(--clr-white);
   --text-muted: var(--clr-gray-300);
   --text-dark: var(--clr-gray-700);
+  --text-disclaimer: var(--clr-gray-400);
 
   --cta-primary: var(--clr-brown-100);
   --cta-primary-hover: var(--clr-brown-200);
@@ -46,6 +47,7 @@
 
   --font-size-logo: 2rem;
   --font-size-link: 1.06rem;
+  --font-size-disclaimer: 0.75rem;
 }
 
 $container-max-width: 1280px;

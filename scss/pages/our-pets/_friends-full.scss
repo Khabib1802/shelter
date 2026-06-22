@@ -1,26 +1,23 @@
 .friends-full {
-  background: #F6F6F6;
-  margin-top: 120px;
-  padding: 80px 0 98px;
-}
+  background-color: var(--bg-secondary);
+  margin-block-start: 7.5rem;
+  padding-block: 5rem 6.125rem;
 
-.friends-full__title {
-  text-align: center;
-  margin-bottom: 60px;
-}
+  &__title {
+    text-align: center;
+    margin-block-end: 3.75rem;
+  }
 
-.friends-full__slider {
-  margin-bottom: 30px;
-}
+  &__slider {
+    margin-block-end: 1.875rem;
+  }
 
-.row-full {
-  flex-wrap: wrap;
-  margin: 0 -20px;
-}
-
-.friends-full__nav {
-  display: flex;
-  width: 340px;
-  justify-content: space-between;
-  margin: 0 auto;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 21.25rem;
+    margin-inline: auto;
+  }
 }

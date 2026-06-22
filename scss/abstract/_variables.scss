@@ -1,5 +1,6 @@
 :root {
   --clr-white: #ffffff;
+  --clr-light: #fafafa;
 
   --clr-gray-100: #f6f6f6;
   --clr-gray-200: #f1f1f1;
@@ -18,6 +19,7 @@
   --bg-primary: var(--clr-white);
   --bg-secondary: var(--clr-gray-100);
   --bg-accent: var(--clr-brown-200);
+  --bg-card: var(--clr-light);
   --bg-dark: var(--clr-brand-dark-2);
   --bg-dark-card: var(--clr-brand-dark-1);
 
@@ -43,6 +45,7 @@
   --font-size-xxl: 2.75rem;
 
   --font-size-logo: 2rem;
+  --font-size-link: 1.06rem;
 }
 
 $container-max-width: 1280px;
@@ -59,7 +62,7 @@ $radius-card: 10px;
 $radius-small: 9px;
 $radius-regular: 16px;
 
-$breakpoint-sm: 400px;
+$breakpoint-sm: 600px;
 $breakpoint-md: 750px;
 $breakpoint-lg: 850px;
 $breakpoint-xl: 1024px;

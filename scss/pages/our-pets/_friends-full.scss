@@ -1,26 +1,59 @@
+@use "../../abstract/" as abs;
+
 .friends-full {
-  background: #F6F6F6;
-  margin-top: 120px;
-  padding: 80px 0 98px;
-}
+  background-color: var(--bg-secondary);
+  margin-block-start: 7.5rem;
+  padding-block: 5rem 6.125rem;
 
-.friends-full__title {
-  text-align: center;
-  margin-bottom: 60px;
-}
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.75rem;
+  }
 
-.friends-full__slider {
-  margin-bottom: 30px;
-}
+  &__title {
+    text-align: center;
+  }
 
-.row-full {
-  flex-wrap: wrap;
-  margin: 0 -20px;
-}
+  .link {
+    padding-block: 0.75rem;
+  }
 
-.friends-full__nav {
-  display: flex;
-  width: 340px;
-  justify-content: space-between;
-  margin: 0 auto;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 21.25rem;
+    margin-inline: auto;
+  }
+
+  @media (max-width: abs.$breakpoint-lg) {
+    padding-block-end: 5rem;
+
+    &__row {
+      row-gap: 2.5rem;
+    }
+
+    &__slider {
+      margin-block-start: -0.625rem;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-md) {
+    padding-block: 2.75rem;
+
+    &__row {
+      row-gap: 2.625rem;
+    }
+
+    &__slider {
+      margin-block-start: auto;
+    }
+
+    &__nav {
+      column-gap: 0.625rem;
+      margin-inline: -0.625rem;
+    }
+  }
 }

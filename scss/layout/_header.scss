@@ -81,7 +81,7 @@
 
   &--light {
     .header__nav-link {
-      color: #545454;
+      color: var(--text-title);
 
       &:hover,
       &:focus-visible,
@@ -96,6 +96,14 @@
 
     .header__logo-subtitle {
       color: var(--text-dark);
+    }
+
+    .header__burger {
+      span,
+      &::after,
+      &::before {
+        background-color: var(--bg-dark);
+      }
     }
   }
 

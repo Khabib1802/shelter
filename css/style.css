@@ -991,5 +991,6 @@ body {
   .friends-full__nav {
     column-gap: 0.625rem;
     margin-inline: -0.625rem;
+    align-self: center;
   }
 }

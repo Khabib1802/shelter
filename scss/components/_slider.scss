@@ -24,6 +24,7 @@
   }
 
   &__card {
+    max-width: max-content;
     flex: 1 1 33.333%;
     display: flex;
     flex-direction: column;
@@ -99,7 +100,7 @@
   @media (max-width: abs.$breakpoint-xl) {
     &__row {
       &--grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
@@ -112,6 +113,15 @@
         gap: clamp(0.313rem, calc(-2.813rem + 10vw), 2.5rem);
 
         .slider__card:nth-child(3) {
+          display: none;
+        }
+      }
+
+      &--grid {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+
+        .slider__card:nth-child(n + 7) {
           display: none;
         }
       }
@@ -131,8 +141,12 @@
       }
 
       &--grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: max-content;
         gap: 1.875rem;
+
+        .slider__card:nth-child(n + 4) {
+          display: none;
+        }
       }
     }
 

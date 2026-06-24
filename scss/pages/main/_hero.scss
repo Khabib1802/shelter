@@ -1,0 +1,104 @@
+@use "../../abstract/" as abs;
+
+.hero {
+  background:
+    url("../img/bg-gradient.png"),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+  display: flex;
+  align-items: flex-end;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2.625rem;
+    margin-block-start: 11.25rem;
+  }
+
+  &__body {
+    max-width: 28.75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.625rem;
+    align-self: start;
+    margin-block-start: clamp(0rem, 0rem + 160 * (100vw - 48rem) / 512, 10rem);
+  }
+
+  &__title {
+    font-family: abs.$font-family-heading;
+    font-size: var(--font-size-xxl);
+    line-height: 1.3;
+    color: var(--text-accent);
+    max-width: 21.875rem;
+  }
+
+  &__text {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  &__image-block {
+    max-width: 43.625rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: end;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  @media (max-width: abs.$breakpoint-lg) {
+    &__content {
+      flex-direction: column;
+      row-gap: 6.25rem;
+    }
+
+    &__body {
+      align-self: center;
+    }
+
+    &__link {
+      align-self: center;
+    }
+
+    &__content {
+      margin-block-start: 9.375rem;
+    }
+
+    &__image-block {
+      max-width: 35.5rem;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-sm) {
+    &__title {
+      font-size: var(--font-size-lg);
+      letter-spacing: 0.06em;
+      max-width: 12.5rem;
+    }
+
+    &__body {
+      text-align: center;
+      align-items: center;
+    }
+
+    &__text {
+      margin-inline: -0.625rem;
+    }
+
+    &__image-block {
+      margin-inline: -0.625rem;
+      max-width: 16.25rem;
+    }
+  }
+}

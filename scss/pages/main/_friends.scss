@@ -1,0 +1,25 @@
+@use "../../abstract/" as abs;
+
+.friends {
+  background-color: var(--bg-secondary);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__slider {
+    margin-block: 3.75rem;
+    margin-inline: auto;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: abs.$breakpoint-md) {
+    &__slider {
+      margin-block: 2.625rem;
+    }
+  }
+}

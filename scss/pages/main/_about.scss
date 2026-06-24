@@ -1,0 +1,85 @@
+@use "../../abstract" as abs;
+
+.about {
+  &__container {
+    max-width: 53.125rem;
+    margin-inline: auto;
+  }
+
+  &__row {
+    display: flex;
+    gap: 5rem 7.5rem;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.56rem;
+    margin-block-start: 1rem;
+    max-width: 26.875rem;
+  }
+
+  &__title {
+    text-wrap: balance;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.56rem;
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--text-main);
+  }
+
+  @media (max-width: abs.$breakpoint-lg) {
+    &__container {
+      max-width: 26.875rem;
+    }
+
+    &__row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__img {
+      order: 1;
+    }
+
+    &__body {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-sm) {
+    &__title {
+      text-align: center;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__row {
+      row-gap: 2.625rem;
+    }
+
+    &__img {
+      max-width: 16.25rem;
+    }
+
+    &__text {
+      margin-inline: 0.3rem;
+      text-align: justify;
+    }
+  }
+}

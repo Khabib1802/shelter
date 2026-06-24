@@ -1,0 +1,112 @@
+@use "../../abstract/" as abs;
+
+.donation {
+  background-color: var(--bg-secondary);
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 57.1875rem;
+    margin-inline: auto;
+    gap: 1.875rem;
+  }
+
+  &__img {
+    flex: 0 1 31.5625rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    flex: 1 1 23.75rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
+
+  &__bank-type {
+    font-family: abs.$font-family-heading;
+    font-size: var(--font-size-sm);
+    line-height: 1.1;
+    letter-spacing: 0.056rem;
+    color: var(--text-title);
+  }
+
+  &__card {
+    background:
+      url("../img/icons/1.svg") left 0.9375rem center no-repeat,
+      var(--cta-primary);
+    border-radius: 0.5625rem;
+    padding-block: 0.625rem;
+    padding-inline: 3.75rem 0.9375rem;
+    font-family: abs.$font-family-heading;
+    font-size: var(--font-size-md);
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    color: var(--text-title);
+    justify-content: start;
+    align-self: start;
+  }
+
+  &__legal-info {
+    font-style: italic;
+    font-size: var(--font-size-disclaimer);
+    line-height: 1.5;
+    color: var(--text-disclaimer);
+  }
+
+  @media (max-width: 920px) {
+    &__row {
+      flex-direction: column-reverse;
+      gap: 3.75rem;
+    }
+
+    &__body {
+      flex: 0 1 auto;
+      padding-inline: clamp(0rem, calc(-19.123rem + 61.194vw), 10.25rem);
+    }
+
+    &__img {
+      flex: 0 1 auto;
+    }
+  }
+
+  @media (max-width: abs.$breakpoint-lg) {
+  }
+
+  @media (max-width: abs.$breakpoint-sm) {
+    &__body {
+      align-items: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__row {
+      gap: 2.5rem;
+    }
+
+    &__card {
+      max-width: 17.56rem;
+      padding-block: 0.8125rem;
+      font-size: var(--font-size-sm);
+      align-self: auto;
+    }
+
+    &__bank-type {
+      letter-spacing: 0;
+    }
+
+    &__legal-info {
+      text-align: justify;
+    }
+  }
+}

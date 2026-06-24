@@ -1,0 +1,13 @@
+@use "variables" as var;
+
+@mixin responsive-container-padding() {
+  padding-inline: var.$container-padding-mobile;
+
+  @media (min-width: var.$breakpoint-md) {
+    padding-inline: var.$container-padding-tablet;
+  }
+
+  @media (min-width: var.$breakpoint-lg) {
+    padding-inline: var.$container-padding-desktop;
+  }
+}

@@ -441,7 +441,7 @@ body {
 .is-open .header__burger::after {
   transform: translateY(-0.5rem) rotate(-45deg);
 }
-@media (max-width: 750px) {
+@media (max-width: 767px) {
   .header__burger {
     display: flex;
   }

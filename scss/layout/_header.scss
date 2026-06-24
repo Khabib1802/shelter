@@ -143,7 +143,7 @@
     }
   }
 
-  @media (max-width: abs.$breakpoint-md) {
+  @media (max-width: 767px) {
     &__burger {
       display: flex;
     }

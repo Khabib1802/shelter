@@ -15,7 +15,7 @@
   color: var(--text-dark);
   @extend %transition;
 
-  &:hover {
+  @include abs.hover {
     background-color: var(--cta-primary-hover);
   }
 }

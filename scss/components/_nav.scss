@@ -14,7 +14,10 @@
   line-height: 1.6;
   @extend %transition;
 
-  &:hover,
+  @include abs.hover {
+    color: var(--text-accent);
+  }
+
   &:focus-visible {
     color: var(--text-accent);
   }
@@ -50,7 +53,10 @@
   .nav__link {
     color: var(--text-title);
 
-    &:hover,
+    @include abs.hover {
+      color: var(--text-dark);
+    }
+
     &:focus-visible,
     &--active {
       color: var(--text-dark);

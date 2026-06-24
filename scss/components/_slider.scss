@@ -35,9 +35,11 @@
     padding-block-end: 1.875rem;
     overflow: hidden;
 
-    &:hover .slider__link {
-      background-color: var(--cta-primary-hover);
-      border-color: var(--cta-primary-hover);
+    @include abs.hover {
+      .slider__link {
+        background-color: var(--cta-primary-hover);
+        border-color: var(--cta-primary-hover);
+      }
     }
   }
 
@@ -80,7 +82,7 @@
     border-radius: 50%;
     @extend %transition;
 
-    &:hover {
+    @include abs.hover {
       background-color: var(--cta-primary-hover);
       border-color: var(--cta-primary-hover);
     }

@@ -52,10 +52,10 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
-}
 
-a:hover {
-  text-decoration: none;
+  @include abs.hover {
+    text-decoration: none;
+  }
 }
 
 ul li {

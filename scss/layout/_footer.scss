@@ -44,7 +44,7 @@
     padding-inline-start: 3.75rem;
     @extend %transition;
 
-    &:hover {
+    @include abs.hover {
       color: var(--cta-primary-hover);
     }
 

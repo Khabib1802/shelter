@@ -64,7 +64,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: abs.$breakpoint-menu) {
   .nav {
     position: fixed;
     inset-block-start: 0;

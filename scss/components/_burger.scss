@@ -46,7 +46,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: abs.$breakpoint-menu) {
   .burger {
     display: flex;
   }

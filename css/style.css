@@ -365,15 +365,15 @@ body.is-open {
 .nav__link--active::after {
   scale: 1 1;
 }
-.header--light .nav__link {
+body:not(.is-open) .header--light .nav__link {
   color: var(--text-title);
 }
 @media (hover: hover) {
-  .header--light .nav__link:hover {
+  body:not(.is-open) .header--light .nav__link:hover {
     color: var(--text-dark);
   }
 }
-.header--light .nav__link:focus-visible, .header--light .nav__link--active {
+body:not(.is-open) .header--light .nav__link:focus-visible, body:not(.is-open) .header--light .nav__link--active {
   color: var(--text-dark);
 }
 @media (max-width: 767px) {
@@ -430,7 +430,7 @@ body.is-open {
 .is-open .burger {
   transform: rotate(90deg);
 }
-.header--light .burger span, .header--light .burger::after, .header--light .burger::before {
+body:not(.is-open) .header--light .burger span, body:not(.is-open) .header--light .burger::after, body:not(.is-open) .header--light .burger::before {
   background-color: var(--bg-dark);
 }
 @media (max-width: 767px) {

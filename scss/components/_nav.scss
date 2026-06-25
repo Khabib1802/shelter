@@ -52,7 +52,7 @@
     }
   }
 
-  .header--light &__link {
+  body:not(.is-open) .header--light &__link {
     color: var(--text-title);
 
     @include abs.hover {

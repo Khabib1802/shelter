@@ -25,7 +25,7 @@
     transform: rotate(90deg);
   }
 
-  .header--light & {
+  body:not(.is-open) .header--light & {
     span,
     &::after,
     &::before {

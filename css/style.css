@@ -508,7 +508,7 @@ body:not(.is-open) .header--light .burger span, body:not(.is-open) .header--ligh
 }
 
 .footer {
-  background: url("../img/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, var(--bg-dark-card) 0%, var(--bg-dark) 100%);
+  background: url("../../assets/images/backgrounds/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, var(--bg-dark-card) 0%, var(--bg-dark) 100%);
   padding-block-start: 2.5rem;
   overflow: hidden;
 }
@@ -548,14 +548,14 @@ body:not(.is-open) .header--light .burger span, body:not(.is-open) .header--ligh
 }
 .footer__link.email {
   grid-row: 2;
-  background: url("../img/icons/2.svg") left center no-repeat;
+  background: url("../../assets/icons/ui/email.svg") left center no-repeat;
 }
 .footer__link.phone {
   grid-row: 3;
-  background: url("../img/icons/3.svg") left center no-repeat;
+  background: url("../../assets/icons/ui/phone.svg") left center no-repeat;
 }
 .footer__link.address {
-  background: url("../img/icons/4.svg") left center no-repeat;
+  background: url("../../assets/icons/ui/pin.svg") left center no-repeat;
   padding-inline-start: 2.625rem;
 }
 .footer__img {
@@ -726,7 +726,7 @@ body:not(.is-open) .header--light .burger span, body:not(.is-open) .header--ligh
   color: var(--text-title);
 }
 .donation__card {
-  background: url("../img/icons/1.svg") left 0.9375rem center no-repeat, var(--cta-primary);
+  background: url("../../../assets/icons/ui/card.svg") left 0.9375rem center no-repeat, var(--cta-primary);
   border-radius: 0.5625rem;
   padding-block: 0.625rem;
   padding-inline: 3.75rem 0.9375rem;
@@ -885,7 +885,7 @@ body:not(.is-open) .header--light .burger span, body:not(.is-open) .header--ligh
   }
 }
 .hero {
-  background: url("../img/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
+  background: url("../../../assets/images/backgrounds/bg-gradient.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%);
   display: flex;
   align-items: flex-end;
 }

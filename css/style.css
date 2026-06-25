@@ -472,11 +472,7 @@ body {
   }
 }
 .header {
-  position: absolute;
-  inset-inline: 0;
-  width: 100%;
-  padding-block-start: 2rem;
-  z-index: 10;
+  padding-block: 1.875rem;
 }
 .header__row {
   display: flex;
@@ -895,7 +891,7 @@ body {
   justify-content: space-between;
   align-items: end;
   gap: 2.625rem;
-  margin-block-start: 11.25rem;
+  padding-block-start: 3.75rem;
 }
 .hero__body {
   max-width: 28.75rem;
@@ -945,7 +941,7 @@ body {
     align-self: center;
   }
   .hero__content {
-    margin-block-start: 9.375rem;
+    padding-block-start: 1.875rem;
   }
   .hero__image-block {
     max-width: 35.5rem;
@@ -972,7 +968,6 @@ body {
 
 .friends-full {
   background-color: var(--bg-secondary);
-  margin-block-start: 7.5rem;
   padding-block: 5rem 6.125rem;
 }
 .friends-full__row {

@@ -142,6 +142,10 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 .overlay {
   position: fixed;
   inset: 0;

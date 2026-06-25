@@ -95,6 +95,10 @@ body {
   font-family: abs.$font-family-base;
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 .overlay {
   position: fixed;
   inset: 0;

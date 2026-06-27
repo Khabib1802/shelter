@@ -2,7 +2,7 @@
 
 .footer {
   background:
-    url("../img/bg-gradient.png"),
+    url("../../assets/images/backgrounds/bg-gradient.png"),
     radial-gradient(
       100% 215.42% at 0% 0%,
       var(--bg-dark-card) 0%,
@@ -44,22 +44,22 @@
     padding-inline-start: 3.75rem;
     @extend %transition;
 
-    &:hover {
+    @include abs.hover {
       color: var(--cta-primary-hover);
     }
 
     &.email {
       grid-row: 2;
-      background: url("../img/icons/2.svg") left center no-repeat;
+      background: url("../../assets/icons/ui/email.svg") left center no-repeat;
     }
 
     &.phone {
       grid-row: 3;
-      background: url("../img/icons/3.svg") left center no-repeat;
+      background: url("../../assets/icons/ui/phone.svg") left center no-repeat;
     }
 
     &.address {
-      background: url("../img/icons/4.svg") left center no-repeat;
+      background: url("../../assets/icons/ui/pin.svg") left center no-repeat;
       padding-inline-start: 2.625rem;
     }
   }

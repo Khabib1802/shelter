@@ -9,12 +9,34 @@
   &__cards {
     width: 100%;
     overflow: hidden;
+    position: relative;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    width: 100%;
+    will-change: transform;
+    @extend %transition;
+
+    &--slide-next {
+      transform: translateX(-100%);
+    }
+
+    &--slide-prev {
+      transform: translateX(-100%);
+    }
+
+    &--no-transition {
+      transition: none !important;
+    }
   }
 
   &__row {
     display: flex;
     justify-content: center;
     gap: clamp(1.25rem, calc(-7.398rem + 16.279vw), 5.625rem);
+    flex-shrink: 0;
+    width: 100%;
 
     &--grid {
       display: grid;
@@ -35,9 +57,11 @@
     padding-block-end: 1.875rem;
     overflow: hidden;
 
-    &:hover .slider__link {
-      background-color: var(--cta-primary-hover);
-      border-color: var(--cta-primary-hover);
+    @include abs.hover {
+      .slider__link {
+        background-color: var(--cta-primary-hover);
+        border-color: var(--cta-primary-hover);
+      }
     }
   }
 
@@ -80,7 +104,7 @@
     border-radius: 50%;
     @extend %transition;
 
-    &:hover {
+    @include abs.hover {
       background-color: var(--cta-primary-hover);
       border-color: var(--cta-primary-hover);
     }
@@ -112,18 +136,18 @@
       &:not(&--grid) {
         gap: clamp(0.313rem, calc(-2.813rem + 10vw), 2.5rem);
 
-        .slider__card:nth-child(3) {
-          display: none;
-        }
+        // .slider__card:nth-child(3) {
+        //   display: none;
+        // }
       }
 
       &--grid {
         grid-template-columns: repeat(2, max-content);
         justify-content: center;
 
-        .slider__card:nth-child(n + 7) {
-          display: none;
-        }
+        // .slider__card:nth-child(n + 7) {
+        //   display: none;
+        // }
       }
     }
   }
@@ -135,18 +159,18 @@
 
     &__row {
       &:not(&--grid) {
-        .slider__card:nth-child(2) {
-          display: none;
-        }
+        //   .slider__card:nth-child(2) {
+        //     display: none;
+        //   }
       }
 
       &--grid {
         grid-template-columns: max-content;
         gap: 1.875rem;
 
-        .slider__card:nth-child(n + 4) {
-          display: none;
-        }
+        // .slider__card:nth-child(n + 4) {
+        //   display: none;
+        // }
       }
     }
 

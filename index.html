@@ -6,40 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cozy House</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <script type="module" src="./scripts/main.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
 
-    <header class="header">
-      <div class="container">
-        <div class="header__row">
-          <div class="header__logo">
-            <a href="" class="header__logo-link">
-              <span class="header__logo-title">Cozy House</span>
-              <span class="header__logo-subtitle">Shelter for pets in Boston</span>
-            </a>
-          </div>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li><a href="#about-the-shelter" class="header__nav-link active">About the shelter</a></li>
-              <li><a href="our-pets.html" class="header__nav-link">Our pets</a></li>
-              <li><a href="#help-the-shelter" class="header__nav-link">Help the shelter</a></li>
-              <li><a href="#contacts" class="header__nav-link">Contacts</a></li>
-            </ul>
-          </nav>
-          <button class="header__burger" aria-label="Open menu">
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
     <main class="content">
       <section class="hero">
         <div class="container">
+          <header class="header">
+            <div class="header__row">
+              <div class="header__logo">
+                <a href="" class="header__logo-link">
+                  <span class="header__logo-title">Cozy House</span>
+                  <span class="header__logo-subtitle">Shelter for pets in Boston</span>
+                </a>
+              </div>
+              <nav class="header__nav nav">
+                <ul class="nav__list">
+                  <li class="nav__list-item"><a href="#about-the-shelter" class="nav__link nav__link--active">About the shelter</a></li>
+                  <li class="nav__list-item"><a href="our-pets.html" class="nav__link">Our pets</a></li>
+                  <li class="nav__list-item"><a href="#help-the-shelter" class="nav__link">Help the shelter</a></li>
+                  <li class="nav__list-item"><a href="#contacts" class="nav__link">Contacts</a></li>
+                </ul>
+              </nav>
+              <button class="header__burger burger" aria-label="Open menu">
+                <span></span>
+              </button>
+            </div>
+          </header>
+
           <div class="hero__content">
             <div class="hero__body">
               <h1 class="hero__title">Not only people need a house</h1>
@@ -49,7 +48,7 @@
               <a href="#our-pets" class="hero__link link">Make a friend</a>
             </div>
             <div class="hero__image-block">
-              <img src="img/main/1.png" alt="Cute puppy looking for a home" class="hero__img">
+              <img src="assets/images/content/hero-puppy.png" alt="Cute puppy looking for a home" class="hero__img">
             </div>
           </div>
         </div>
@@ -60,7 +59,7 @@
           <div class="about__container">
             <div class="about__row">
               <div class="about__img">
-                <img src="img/main/2.png" alt="puppy">
+                <img src="assets/images/content/about-pets.png" alt="Cute cat and dog, residents of our shelter">
               </div>
               <div class="about__body">
                 <h2 class="about__title title">About the shelter “Cozy House”</h2>
@@ -78,36 +77,15 @@
         <div class="container">
           <h2 class="friends__title title">Our friends who <br> are looking for a house</h2>
           <div class="friends__slider slider">
-            <button class="slider__btn">
-              <img src="img/icons/arr1.svg" alt="arrow">
+            <button class="slider__btn prev">
+              <img src="assets/icons/ui/arrows/arrow-left.svg" alt="arrow">
             </button>
             <div class="slider__cards">
               <div class="slider__row">
-                <a href="#" class="slider__card">
-                  <div class="slider__img">
-                    <img src="img/main/slider/1.png" alt="kitten">
-                  </div>
-                  <div class="slider__name">Katrine</div>
-                  <div class="slider__link link">Learn more</div>
-                </a>
-                <a href="#" class="slider__card">
-                  <div class="slider__img">
-                    <img src="img/main/slider/2.png" alt="kitten">
-                  </div>
-                  <div class="slider__name">Jennifer</div>
-                  <div class="slider__link link">Learn more</div>
-                </a>
-                <a href="#" class="slider__card">
-                  <div class="slider__img">
-                    <img src="img/main/slider/3.png" alt="kitten">
-                  </div>
-                  <div class="slider__name">Woody</div>
-                  <div class="slider__link link">Learn more</div>
-                </a>
               </div>
             </div>
-            <button class="slider__btn">
-              <img src="img/icons/arr2.svg" alt="arrow">
+            <button class="slider__btn next">
+              <img src="assets/icons/ui/arrows/arrow-right.svg" alt="arrow">
             </button>
           </div>
           <div class="friends__link">
@@ -123,42 +101,42 @@
           <div class="help__content">
             <ul class="help__row help__row--top">
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/1.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/1.svg" alt="Pet food"></div>
                 <p class="help__item-name">Pet food</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/2.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/2.svg" alt="Transportation"></div>
                 <p class="help__item-name">Transportation</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/3.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/3.svg" alt="Toys"></div>
                 <p class="help__item-name">Toys</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/4.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/4.svg" alt="Bowls and cups"></div>
                 <p class="help__item-name">Bowls and cups</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/5.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/5.svg" alt="Shampoos"></div>
                 <p class="help__item-name">Shampoos</p>
               </li>
             </ul>
 
             <ul class="help__row help__row--bottom">
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/6.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/6.svg" alt="Vitamins"></div>
                 <p class="help__item-name">Vitamins</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/7.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/7.svg" alt="Medicines"></div>
                 <p class="help__item-name">Medicines</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/8.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/8.svg" alt="Collars / leashes"></div>
                 <p class="help__item-name">Collars / leashes</p>
               </li>
               <li class="help__item">
-                <div class="help__item-img"><img src="img/main/help/9.svg" alt=""></div>
+                <div class="help__item-img"><img src="assets/icons/help-icons/9.svg" alt="Sleeping areas"></div>
                 <p class="help__item-name">Sleeping areas</p>
               </li>
             </ul>
@@ -171,7 +149,7 @@
         <div class="container">
           <div class="donation__row">
             <div class="donation__img">
-              <img src="img/main/3.png" alt="puppy">
+              <img src="assets/images/content/donation-puppy.png" alt="A Golden Retriever lying down on the floor">
             </div>
             <div class="donation__body">
               <h2 class="donation__title title">You can also <br> make a donation</h2>
@@ -201,12 +179,15 @@
             <a href="https://www.google.com/maps/place/18+S+Park+Rd,+London+SW19+6NN,+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F/@51.4440909,-0.2084612,18.75z/data=!4m6!3m5!1s0x48760f46ff61dba9:0x5696e3b778e1f425!8m2!3d51.4441053!4d-0.2076652!16s%2Fg%2F11b90n3sb6?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer__link address">18 South Park, London </a>
           </div>
           <div class="footer__img">
-            <img src="img/footer.png" alt="puppy">
+            <img src="assets/images/content/footer-puppy.png" alt="A happy dog sitting with its tongue out and one paw stretched forward">
           </div>
         </div>
       </div>
     </footer>
   </div>
+
+  <div class="overlay"></div>
+
 </body>
 
 </html>

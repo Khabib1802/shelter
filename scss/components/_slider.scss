@@ -9,12 +9,34 @@
   &__cards {
     width: 100%;
     overflow: hidden;
+    position: relative;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    width: 100%;
+    will-change: transform;
+    @extend %transition;
+
+    &--slide-next {
+      transform: translateX(-100%);
+    }
+
+    &--slide-prev {
+      transform: translateX(-100%);
+    }
+
+    &--no-transition {
+      transition: none !important;
+    }
   }
 
   &__row {
     display: flex;
     justify-content: center;
     gap: clamp(1.25rem, calc(-7.398rem + 16.279vw), 5.625rem);
+    flex-shrink: 0;
+    width: 100%;
 
     &--grid {
       display: grid;
@@ -136,10 +158,10 @@
     column-gap: 5rem;
 
     &__row {
-      // &:not(&--grid) {
-      //   .slider__card:nth-child(2) {
-      //     display: none;
-      //   }
+      &:not(&--grid) {
+        //   .slider__card:nth-child(2) {
+        //     display: none;
+        //   }
       }
 
       &--grid {

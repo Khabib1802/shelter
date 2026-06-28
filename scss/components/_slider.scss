@@ -135,19 +135,11 @@
     &__row {
       &:not(&--grid) {
         gap: clamp(0.313rem, calc(-2.813rem + 10vw), 2.5rem);
-
-        // .slider__card:nth-child(3) {
-        //   display: none;
-        // }
       }
 
       &--grid {
         grid-template-columns: repeat(2, max-content);
         justify-content: center;
-
-        // .slider__card:nth-child(n + 7) {
-        //   display: none;
-        // }
       }
     }
   }
@@ -158,19 +150,9 @@
     column-gap: 5rem;
 
     &__row {
-      &:not(&--grid) {
-        //   .slider__card:nth-child(2) {
-        //     display: none;
-        //   }
-      }
-
       &--grid {
         grid-template-columns: max-content;
         gap: 1.875rem;
-
-        // .slider__card:nth-child(n + 4) {
-        //   display: none;
-        // }
       }
     }
 

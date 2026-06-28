@@ -1,5 +1,5 @@
 import { loadPets } from "./api.js";
-import shuffleArray from "./utils.js";
+import { shuffleArray } from "./utils.js";
 
 const BREAKPOINTS = {
   desktop: "(min-width: 851px)",

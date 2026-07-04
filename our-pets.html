@@ -140,6 +140,36 @@
 
   <div class="overlay"></div>
 
+  <div class="pet-popup" id="pet-popup" aria-hidden="true">
+    <div class="pet-popup__inner">
+      <button type="button" class="pet-popup__close" aria-label="Close popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L19 19M19 1L1 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="pet-popup__card">
+        <div class="pet-popup__image">
+          <img src="" alt="" class="pet-popup__img">
+        </div>
+
+        <div class="pet-popup__content">
+          <h3 class="pet-popup__name"></h3>
+          <p class="pet-popup__type"></p>
+          <p class="pet-popup__description"></p>
+
+          <ul class="pet-popup__details">
+            <li><span class="pet-popup__label">Age:</span> <span class="pet-popup__age"></span></li>
+            <li><span class="pet-popup__label">Inoculations:</span> <span class="pet-popup__inoculations"></span></li>
+            <li><span class="pet-popup__label">Diseases:</span> <span class="pet-popup__diseases"></span></li>
+            <li><span class="pet-popup__label">Parasites:</span> <span class="pet-popup__parasites"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 
 </html>

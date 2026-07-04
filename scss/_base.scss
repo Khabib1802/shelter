@@ -95,7 +95,8 @@ body {
   font-family: abs.$font-family-base;
 }
 
-body.is-open {
+body.is-open,
+body.is-popup-open {
   overflow: hidden;
 }
 
@@ -106,10 +107,10 @@ body.is-open {
   z-index: 20;
   opacity: 0;
   visibility: hidden;
-  @extend %transition;
+}
 
-  .is-open & {
-    opacity: 1;
-    visibility: visible;
-  }
+.is-open .overlay,
+.is-popup-open .overlay {
+  opacity: 1;
+  visibility: visible;
 }

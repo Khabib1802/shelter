@@ -11,3 +11,11 @@
     padding-inline: var.$container-padding-desktop;
   }
 }
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

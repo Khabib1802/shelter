@@ -52,10 +52,10 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
-}
 
-a:hover {
-  text-decoration: none;
+  @include abs.hover {
+    text-decoration: none;
+  }
 }
 
 ul li {
@@ -93,4 +93,24 @@ html {
 
 body {
   font-family: abs.$font-family-base;
+}
+
+body.is-open,
+body.is-popup-open {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.is-open .overlay,
+.is-popup-open .overlay {
+  opacity: 1;
+  visibility: visible;
 }
